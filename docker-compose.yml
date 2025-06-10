@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  basic-pitch:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/basic-pitch
+    working_dir: /basic-pitch
+    command: bash
