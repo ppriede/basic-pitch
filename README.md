@@ -201,6 +201,19 @@ Input audio maybe be of any sample rate, however, all audio will be resampled to
 
 Thanks to DamRsn for developing this working VST version of basic-pitch! - https://github.com/DamRsn/NeuralNote
 
+### Web GUI
+
+You can run a minimal web interface locally using Docker. The container exposes
+port `5000` and lets you upload an audio file from your browser and download the
+transcribed MIDI result.
+
+```bash
+docker build -f Dockerfile.gui -t basic-pitch-web .
+docker run -p 5000:5000 basic-pitch-web
+```
+
+Then open `http://localhost:5000` in your browser to use the interface.
+
 
 ## Contributing
 
